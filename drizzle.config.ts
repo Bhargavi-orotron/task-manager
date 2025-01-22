@@ -16,7 +16,7 @@ export default defineConfig({
     database: process.env.DATABASE_NAME!,
     ssl: {
       rejectUnauthorized: true,
-      ca: fs.readFileSync("./ca.pem").toString(), // Ensure this file exists
+      ca: fs.readFileSync("./ca.pem").toString(), 
     },
   },
 });

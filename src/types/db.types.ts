@@ -1,18 +1,23 @@
 import { NewUser, User, UsersTable } from "../connection/schema/users";
-
+import { NewRefreshToken, RefreshToken, RefreshTokenTable } from "../connection/schema/refreshTokens";
+import { NewResetPasswordToken, ResetPasswordToken, ResetToken } from "../connection/schema/resetPasswordTokens";
 
 
 export type DBTable =
-  | UsersTable
+  | UsersTable| ResetToken 
+  | RefreshTokenTable
 
 export type DBTableRow =
-  | User
+  | User |ResetPasswordToken 
+  | RefreshToken
 
 export type DBNewRecord =
-  | NewUser
+  | NewUser | NewResetPasswordToken 
+  | NewRefreshToken 
 
 export type DBNewRecords =
-  | NewUser[]
+  | NewUser[] | NewResetPasswordToken[] 
+  | NewRefreshToken[] 
 
 export type DBTableColumns<T extends DBTableRow> = keyof T;
 export type SortDirection = "asc" | "desc";
@@ -25,6 +30,15 @@ export type WhereQueryData<T extends DBTableRow> = {
 export type OrderByQueryData<T extends DBTableRow> = {
   columns: Array<DBTableColumns<T>>;
   values: SortDirection[];
+};
+
+export type PaginationInfo = {
+  total_records: number;
+  total_pages: number;
+  page_size: number;
+  current_page: number;
+  next_page: number | null;
+  prev_page: number | null;
 };
 
 export type InQueryData<T extends DBTableRow> = {

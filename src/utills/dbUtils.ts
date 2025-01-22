@@ -116,7 +116,9 @@ const executeQuery = async <R extends DBTableRow, C extends keyof R = keyof R>(
     dQuery = dQuery.where(inQueryCondition);
   }
 
-  dQuery = dQuery.orderBy(...orderByConditions);
+  if (orderByConditions.length > 0) {
+    dQuery = dQuery.orderBy(...orderByConditions);
+  }
 
   if (paginationData) {
     const { page, pageSize } = paginationData;

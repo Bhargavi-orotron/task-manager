@@ -10,6 +10,7 @@ app.get('/', (c) => {
   return c.text('Hello Hono!')
 })
 app.route('users', route)
+console.log("Schema Path:", "./src/connection/schema/*");
 
 const port = Number(process.env.PORT)
 

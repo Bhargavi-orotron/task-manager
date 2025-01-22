@@ -19,12 +19,12 @@ export const DEF_MSG_422 = 'Unprocessable Entity';
 // --------Validation Errors --------
 
 
-export const F_NAME_REQ = 'First name is required';
-export const F_NAME_MAX_LENGTH = 'First name must be less than 40 characters';
-export const F_NAME_MIN_LENGTH = 'First name must be at least 3 characters';
+export const FIRST_NAME_REQ = 'First name is required';
+export const FIRST_NAME_MAX_LENGTH = 'First name must be less than 40 characters';
+export const FIRST_NAME_MIN_LENGTH = 'First name must be at least 3 characters';
 
-export const L_NAME_REQ = 'Last name is required';
-export const L_NAME_MAX_LENGTH = 'Last name must be less than 40 characters';
+export const LAST_NAME_REQ = 'Last name is required';
+export const LAST_NAME_MAX_LENGTH = 'Last name must be less than 40 characters';
 
 
 export const EMAIL_REQ = 'Email is required';
@@ -65,11 +65,11 @@ export const USER_UPD_VALID_ERROR = 'User update details are invalid';
 export const INVALID_TOKEN = 'Invalid token';
 export const INVALID_REFRESH_TOKEN = 'Invalid refresh token';
 export const TOKEN_EXPIRED = 'Token has been expired';
-export const TOKEN_N_FOND = 'Token not found';
+export const TOKEN_NOT_FOND = 'Token not found';
 export const INV_CREDS = 'Invalid credentials';
-export const TKN_USED = 'Token has been used already';
-export const TKN_VERIFIED = 'Token has been verified successfully';
-export const TKN_GEN = 'Token has been generated successfully';
+export const TOKEN_USED = 'Token has been used already';
+export const TOKEN_VERIFIED = 'Token has been verified successfully';
+export const TOKENN_GEN = 'Token has been generated successfully';
 
 export const FORGOT_EMAIL_SENT = 'Forgot password email link has been sent successfully';
 export const LOGIN_SUCCESS = 'User login successful';
@@ -88,44 +88,14 @@ export const COMMENT_VALID_ERROR="Comment validation failed"
 export const ADMIN_EXISTS = 'Admin already exists';
 export const ADMIN_CREAT_SUCCESS = 'Admin user created successfully';
 export const USER_CREAT_SUCCESS = 'User created successfully';
-export const DEV_CREAT_SUCCESS = 'Developer user created successfully';
-export const CUR_PSWD_WRNG = 'Current password is wrong';
+export const DEVELOPER_CREAT_SUCCESS = 'Developer user created successfully';
+export const CURRENT_PASSWORD_WRNG = 'Current password is wrong';
 export const PSWD_UPDATE_SUCCESS = 'Password updated successfully';
-export const USER_FET_SUCCESS = 'User detailes fetched successfully';
+export const USER_FETCHED_SUCCESS = 'User detailes fetched successfully';
 export const USER_DATA_GET_SUCCESS = 'Users data fetched successfully';
-export const USER_DEL_SUCCESS = 'User deleted successfully';
-export const USER_UPD_SUCCESS = 'User updated successfully';
-export const DATA_N_FOND = 'Data not found';
-
-// --------Tickets Module Messages --------
-
-export const TICKET_NOT_FOUND = "Ticket not found";
-export const TICKET_CREATED_SUCCESS = "Ticket created successfully";
-export const TICKET_UPDATED_SUCCESS = "Ticket updated successfully";
-export const TICKET_DELETED_SUCCESS = "Ticket deleted successfully";
-export const TICKETS_FETCHED_SUCCESS = "Tickets fetched successfully";
-export const TICKET_FETCHED_SUCCESS = "Ticket fetched successfully";
-export const TICKET_ASSIGNED_SUCCESS = "Ticket assigned successfully";
-export const TICKET_VALIDATION_ERROR ="Ticket validation failed";
-export const TICKET_UPDTAE_ERROR="Ticket update failed";
-
-export const TICKET_TITLE_REQUIRED = "Ticket title is required";
-export const TICKET_TITLE_STRING = "Ticket title must be a string";
-export const TICKET_TITLE_MIN_LENGTH = "Ticket title must be at least 5 characters long";
-export const TICKET_TITLE_MAX_LENGTH = "Ticket title must be at most 50 characters long";
-
-
-export const TICKET_DESCRIPTION_STRING = "Ticket description must be a string";
-export const TICKET_DESCRIPTION_MIN_LENGTH = "Ticket description must be at least 20 characters long";
-export const TICKET_DESCRIPTION_MAX_LENGTH = "Ticket description must be at most 400 characters long";
-
-export const TICKET_PRIORITY_REQUIRED = "Ticket priority is required";
-export const TICKET_STATUS_REQUIRED = "Ticket status is required";
-export const TICKET_PRIORITY = ['low', 'medium', 'high'] as const;
-export const TICKET_STATUS = ['open', 'closed', 'inprogress'] as const;
-export const TICKET_PRIORITY_VALIDATION = "Ticket priority must be low, medium or high";
-export const TICKET_STATUS_VALIDATION = "Ticket status must be open, closed or inprogress";
-export const PAGE_NOT_EXIST = 'The Requested page is doesnot exist';
+export const USER_DELETE_SUCCESS = 'User deleted successfully';
+export const USER_UPDATE_SUCCESS = 'User updated successfully';
+export const DATA_NOT_FOND = 'Data not found';
 
 //--------Comments Module Messages --------
 
@@ -155,27 +125,26 @@ export const FILE_FETCHED_SUCCESS = 'File fetched successfully';
 
 
 
-export const PROJ_NAME_REQ = 'Project name is required';
-export const PROJ_NAME_MAX_LENGTH = 'Project name must be less than 40 characters';
-export const PROJ_NAME_MIN_LENGTH = 'Project name must be at least 3 characters';
+export const PROJECT_NAME_REQ = 'Project name is required';
+export const PROJECT_NAME_MAX_LENGTH = 'Project name must be less than 40 characters';
+export const PROJECT_NAME_MIN_LENGTH = 'Project name must be at least 3 characters';
 
-export const PROJ_CODE_REQ = 'Project code is required';
-export const PROJ_CODE_MAX_LENGTH = 'Project code must be less than 10 characters';
-export const PROJ_CODE_MIN_LENGTH = 'Project code must be at least 2 characters';
+export const PROJECT_CODE_REQ = 'Project code is required';
+export const PROJECT_CODE_MAX_LENGTH = 'Project code must be less than 10 characters';
+export const PROJECT_CODE_MIN_LENGTH = 'Project code must be at least 2 characters';
 
-export const PROJ_VALID_ERROR = 'Project details are invalid';
-export const PROJ_NOT_FOUND = 'Project not found';
-export const PROJ_NM_EXISTS = 'Project name already exists';
-export const PROJ_CD_EXISTS = 'Project code already exists';
-export const PROJ_CREATED = 'Project created successfully';
-export const PROJ_UPDATED = 'Project updated successfully';
-export const PROJ_DELETED = 'Project deleted successfully';
-export const PROJ_FETCH_SUCCESS = 'Project details fetched successfully';
-export const PROJ_USERS_ADD_SUCCESS = 'Developers added to project successfully';
-export const INV_ID = 'Invalid id';
-export const DEV_NOT_FND = 'Developers not found';
-export const DEV_FETCH_SUCCESS = 'Developers fetched successfully';
-export const PROJ_ALL_FETCH_SUCCESS = 'Projects fetched successfully';
-export const PROJ_CREAT_VALID_ERROR = 'Project creation details are invalid';
-export const PROJ_UPD_VALID_ERROR = 'Project update details are invalid';
-export const PROJ_TKT_FETCH_SUCCESS = 'Tickets fetched successfully';
+export const PROJECT_VALID_ERROR = 'Project details are invalid';
+export const PROJECT_NOT_FOUND = 'Project not found';
+export const PROJECT_NM_EXISTS = 'Project name already exists';
+export const PROJECT_CD_EXISTS = 'Project code already exists';
+export const PROJECT_CREATED = 'Project created successfully';
+export const PROJECT_UPDATED = 'Project updated successfully';
+export const PROJECT_DELETED = 'Project deleted successfully';
+export const PROJECT_FETCH_SUCCESS = 'Project details fetched successfully';
+export const PROJECT_USERS_ADD_SUCCESS = 'Developers added to project successfully';
+export const INVALID_ID = 'Invalid id';
+export const DEVELOPER_NOT_FND = 'Developers not found';
+export const DEVELOPER_FETCH_SUCCESS = 'Developers fetched successfully';
+export const PROJECT_ALL_FETCH_SUCCESS = 'Projects fetched successfully';
+export const PROJECT_CREAT_VALID_ERROR = 'Project creation details are invalid';
+export const PROJECT_UPDATE_VALID_ERROR = 'Project update details are invalid';

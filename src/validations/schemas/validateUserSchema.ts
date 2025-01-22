@@ -1,5 +1,5 @@
 import { email, forward, InferOutput, intersect, maxLength, minLength, never, nonNullable, object, optional, partialCheck, picklist, pipe, pipeAsync, rawTransformAsync, regex, string, transform, trim, value } from "valibot";
-import { EMAIL_EXISTS, EMAIL_INVALID, EMAIL_MAX_LENGTH, EMAIL_REQ, F_NAME_MAX_LENGTH, F_NAME_MIN_LENGTH, F_NAME_REQ, L_NAME_MAX_LENGTH, L_NAME_REQ, PASSWORD_INVALID, PASSWORD_MAX_LENGTH, PASSWORD_MIN_LENGTH, PASSWORD_MISMATCH, PASSWORD_REQ, PASSWORD_REQ_LOWERCASE, PASSWORD_REQ_NUMBER, PASSWORD_REQ_UPPERCASE, PHONE_MAX_LENGTH, PHONE_MIN_LENGTH, USER_TYPE_INVALID } from "../../constants/messages";
+import { EMAIL_EXISTS, EMAIL_INVALID, EMAIL_MAX_LENGTH, EMAIL_REQ, FIRST_NAME_MAX_LENGTH, FIRST_NAME_MIN_LENGTH, FIRST_NAME_REQ, LAST_NAME_MAX_LENGTH, LAST_NAME_REQ, PASSWORD_INVALID, PASSWORD_MAX_LENGTH, PASSWORD_MIN_LENGTH, PASSWORD_MISMATCH, PASSWORD_REQ, PASSWORD_REQ_LOWERCASE, PASSWORD_REQ_NUMBER, PASSWORD_REQ_UPPERCASE, PHONE_MAX_LENGTH, PHONE_MIN_LENGTH, USER_TYPE_INVALID } from "../../constants/messages";
 
 export const ValidateEmailSchema = pipe(
     nonNullable(string(EMAIL_REQ)),
@@ -19,19 +19,19 @@ export const ValidatePasswordSchema = pipe(
 )
 
 export const ValidateUserSchema = object({
-    firstName: pipe(nonNullable(string(F_NAME_REQ)),
-                minLength(3,F_NAME_MIN_LENGTH),
-                maxLength(40,F_NAME_MAX_LENGTH),
+    first_name: pipe(nonNullable(string(FIRST_NAME_REQ)),
+                minLength(3,FIRST_NAME_MIN_LENGTH),
+                maxLength(40,FIRST_NAME_MAX_LENGTH),
                 trim()
     ),
-    lastName: pipe(nonNullable(string(L_NAME_REQ)),
-                maxLength(40,L_NAME_MAX_LENGTH),
+    last_name: pipe(nonNullable(string(LAST_NAME_REQ)),
+                maxLength(40,LAST_NAME_MAX_LENGTH),
                 trim()
               ),
-    middleName: optional(string()),
+    middle_name: optional(string()),
     email: ValidateEmailSchema,
     password: ValidatePasswordSchema,
-    mobileNumber: optional(pipe(
+    mobile_number: optional(pipe(
                     string(),
                     minLength(10,PHONE_MIN_LENGTH),
                     maxLength(14,PHONE_MAX_LENGTH),
